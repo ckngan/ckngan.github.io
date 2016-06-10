@@ -1,2 +1,2 @@
 # ckngan.github.io
-Personal portfolio of Cindy Ngan.
+Personal website of Cindy Ngan.
