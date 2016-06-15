@@ -1,3 +1,5 @@
+<?php include "form.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,8 +19,6 @@
 
   <link rel="shortcut icon" href=".ico">
 
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -29,11 +29,11 @@
   <header class="container">
     <!-- insert logo/branding and photo here -->
     <nav class="navbar navbar-fixed-top text-uppercase text-right offset-right">
-      <a href="helloworld.html">home</a>
+      <a href="helloworld.php">home</a>
       <a href="#">portfolio</a>
       <a href="#">skills</a>
       <a href="#">experience</a>
-      <a href="contact.html" class="active">contact</a>
+      <a href="contact.php" class="active">contact</a>
     </nav>
   </header>
 
@@ -47,61 +47,53 @@
     <hr />
     <p class="text-center">Please note: this form currently does not work.</p>
     <br />
-    <form class="form-horizontal" role="form" method="post" action="#">
+    <form class="form-horizontal" role="form" method="post" action="contact.php">
       <div class="form-group">
-        <label for="name" class="col-xs-2 control-label">Name</label>
-        <div class="col-xs-10">
-          <input type="text" class="form-control" id="name" name="name" placeholder="First &amp; Last Name" value="">
+        <label for="name" class="control-label" tabindex="-1">Name</label>
+        <div>
+          <input type="text" class="form-control" id="name" name="name" placeholder="First &amp; Last Name" value="<?php if (isset($_POST["submit"])) { echo htmlspecialchars($name); } ?>" />
+          <?php echo "<p class='text-danger'>$errName</p>"; ?>
         </div>
       </div>
 
       <div class="form-group">
-        <label for="email" class="col-xs-2 control-label">Email</label>
-        <div class="col-xs-10">
-          <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="">
+        <label for="email" class="control-label" tabindex="-1">Email</label>
+        <div>
+          <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="<?php if (isset($_POST["submit"])) { echo htmlspecialchars($email); } ?>" />
+          <?php echo "<p class='text-danger'>$errEmail</p>"; ?>
         </div>
       </div>
 
       <div class="form-group">
-        <label for="message" class="col-sm-2 control-label">Message</label>
-        <div class="col-sm-10">
-          <textarea class="form-control" rows="4" id="message" name="message"></textarea>
+        <label for="message" class="control-label" tabindex="-1">Message</label>
+        <div>
+          <textarea class="form-control" rows="4" id="message" name="message"><?php if (isset($_POST["submit"])) { echo $message; } ?></textarea>
+          <?php echo "<p class='text-danger'>$errMessage</p>"; ?>
         </div>
       </div>
 
       <div class="form-group">
-        <label for="human" class="col-sm-2 control-label">2 + 3 = ?</label>
-        <div class="col-sm-10">
-          <input type="text" class="form-control" id="human" name="human" placeholder="Your Answer">
+        <label for="human" class="control-label" tabindex="-1">2 + 3 = ?</label>
+        <div>
+          <input type="number" class="form-control" id="human" name="human" placeholder="Your Answer" />
+          <?php echo "<p class='text-danger'>$errHuman</p>"; ?>
         </div>
       </div>
 
       <div class="form-group">
-        <div class="col-xs-10 col-xs-offset-2">
-          <input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
+        <div>
+          <input type="submit" class="btn btn-primary" id="submit" name="submit" value="Send">
         </div>
       </div>
 
       <div class="form-group">
-        <div class="col-xs-10 col-xs-offset-2">
-          <!-- Will be used to display an alert to the user -->
+        <div class="col-xs-offset-4 col-xs-4 text-center">
+          <?php echo $result; ?>
         </div>
       </div>
     </form>
   </div>
 
-  <footer class="container text-center">
-    <p class="soc">
-      <a href="http://twitter.com/cngan">a</a>
-      <a href="http://www.instagram.com/thisiscngan">x</a>
-      <a href="http://ca.linkedin.com/in/cindyngan">j</a>
-      <a href="http://www.github.com/ckngan">Q</a>
-      <a href="http://be.net/cindyngan">H</a>
-      <a href="mailto:cindyngandc@gmail.com">.</a>
-    </p>
-    <br />
-    <p class="small">&copy; 2016 Cindy Ngan. All rights reserved.</p>
-    <p class="small">Created: May 17, 2016 | Online: ??? | Modified: June 10, 2016</p>
-  </footer>
+  <?php include "footer.php"; ?>
 </body>
 </html>

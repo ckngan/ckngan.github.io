@@ -121,7 +121,6 @@ nav {
   font-weight: bold;
   font-size: 1.2em;
   padding-left: 0;
-  margin-bottom: 0;
 }
 nav a {
   padding-right: 2%;
@@ -132,8 +131,7 @@ nav a:hover {
 .navbar {
   position: relative;
   min-height: 50px;
-  margin-bottom: 20px;
-  border: 1px solid transparent;
+  border-bottom: 1px solid #ccc;
 }
 @media (min-width: 768px) {
   .navbar {

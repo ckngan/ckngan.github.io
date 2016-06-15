@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
@@ -17,8 +17,6 @@
 
   <link rel="shortcut icon" href=".ico" />
 
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -29,11 +27,11 @@
   <header class="container">
     <!-- insert logo/branding and photo here -->
     <nav class="navbar navbar-fixed-top text-uppercase text-right offset-right">
-      <a href="helloworld.html" class="active">home</a>
+      <a href="helloworld.php" class="active">home</a>
       <a href="#">portfolio</a>
       <a href="#">skills</a>
       <a href="#">experience</a>
-      <a href="contact.html">contact</a>
+      <a href="contact.php">contact</a>
     </nav>
   </header>
 
@@ -47,18 +45,6 @@
     <p class="col-xs-offset-2 col-xs-8">Welcome to my personal website! It's currently under construction, so please bear with me. In the meantime, why don't you check out my social media pages below?</p>
   </div>
 
-  <footer class="container text-center">
-    <p class="soc">
-      <a href="http://twitter.com/cngan">a</a>
-      <a href="http://www.instagram.com/thisiscngan">x</a>
-      <a href="http://ca.linkedin.com/in/cindyngan">j</a>
-      <a href="http://www.github.com/ckngan">Q</a>
-      <a href="http://be.net/cindyngan">H</a>
-      <a href="mailto:cindyngandc@gmail.com">.</a>
-    </p>
-    <br />
-    <p class="small">&copy; 2016 Cindy Ngan. All rights reserved.</p>
-    <p class="small">Created: May 17th, 2016 | Online: ??? | Modified: n/a</p>
-  </footer>
+  <?php include "footer.php"; ?>
 </body>
 </html>
