@@ -3,7 +3,6 @@ rem: default font size of browser, can be used to ensure HTML elements scale in 
 - 1rem = 16px, 2rem = 32px, 3rem = 48px, etc. on most browsers
 em: relative value that changes in proportion to size of parent element, eg. if parent element is 20px, child elements with 1em = 20px, 0.5em = 10px, etc.
 
-background-image: url("");
 background-size: look up values for this;
 
 ID rules take precedent over class rules
@@ -14,7 +13,6 @@ flex-wrap: wrap;
 justify-content: center;
 
 grayscale (%=lightness): 0% (black), 20% (#333333), 40% (#666666), 60% (#999999), 80% (#CCCCCC), 100% (white)
-bootstrap grid system: xs (phones), sm (tablets), md (desktops), and lg (larger desktops)
 
 a:link, :visited, :hover, :active <- in this order!
 book 300, normal 400, semibold 600, bold 700, extrabold 800
@@ -114,6 +112,18 @@ h1 {
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: .25em;
+}
+.typeform-widget {
+  width: 100%;
+  height: 500px;
+  border: 1px solid #ccc;
+}
+#typeform {
+  font-size: 12px;
+  color: #999;
+  opacity: 0.5;
+  padding-top: 5px;
+  float: right;
 }
 
 /* HEADER */
