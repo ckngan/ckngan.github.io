@@ -113,6 +113,14 @@ h1 {
   vertical-align: baseline;
   border-radius: .25em;
 }
+.va-middle {
+  display: -webkit-flex; /* Safari */
+  -webkit-align-items: center; /* Safari 7.0+ */
+  display: flex;
+  align-items: center;
+}
+
+/* WIDGETS */
 .typeform-widget {
   width: 100%;
   height: 500px;
@@ -124,6 +132,11 @@ h1 {
   opacity: 0.5;
   padding-top: 5px;
   float: right;
+}
+.lightwidget-widget {
+  width: 100%;
+  border: 0;
+  overflow: hidden;
 }
 
 /* HEADER */
@@ -159,9 +172,10 @@ nav a:hover {
 }
 
 /* FOOTER */
-/*footer {
-  display: flex;
-}*/
+footer {
+  /*display: flex;*/
+  margin-top: 1%;
+}
 .soc {
   font-family: 'socicon'!important;
   font-size: 1.5em;
