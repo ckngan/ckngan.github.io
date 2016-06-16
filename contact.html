@@ -37,29 +37,87 @@
   <!-- Heading -->
   <div class="container">
     <h1 class="text-center">CONTACT ME</h1>
-    <hr /><br />
+    <hr />
+  </div>
+
+  <div class="container text-center">
+    <h3>resume | <a href="https://www.linkedin.com/in/cindyngan" target="_blank">linkedin</a></h3>
   </div>
 
   <!-- Typeform contact form -->
-  <div class="container">
+  <!-- <div class="container">
+    <br />
     <div class="typeform-widget" data-url="https://cngan.typeform.com/to/XN3dh8" data-text="Contact Cindy"></div>
+  </div>
+  <div class="container">
     <div id="typeform">Powered by <a href="https://www.typeform.com/examples/forms/?utm_campaign=XN3dh8&amp;utm_source=typeform.com-1973332-Basic&amp;utm_medium=typeform&amp;utm_content=typeform-embedded-poweredbytypeform&amp;utm_term=EN" target="_blank">Typeform</a></div>
+  </div> -->
+
+  <!-- original form -->
+  <div class="container">
+    <form class="form-horizontal" role="form" method="post" action="https://formspree.io/cindyngandc@gmail.com">
+      <div class="form-group">
+        <label for="name" class="control-label" tabindex="-1">Name</label> <span class="required">&nbsp;(required)</span>
+        <input type="text" class="form-control" id="name" name="name" placeholder="First &amp; Last Name" autofocus required />
+      </div>
+
+      <div class="form-group">
+        <label for="email" class="control-label" tabindex="-1">Email</label> <span class="required">&nbsp;(required)</span>
+        <input type="email" class="form-control" id="email" name="_replyto" placeholder="example@domain.com" required />
+      </div>
+
+      <div class="form-group">
+        <label for="website" class="control-label" tabindex="-1">Your Website</label>
+        <input type="url" class="form-control" id="website" name="website" placeholder="www.domain.com" />
+      </div>
+
+      <div class="form-group">
+        <label for="message" class="control-label" tabindex="-1">Message</label> <span class="required">&nbsp;(required)</span>
+        <textarea class="form-control" rows="4" id="message" name="message" placeholder="Type your message here" required></textarea>
+      </div>
+
+      <!-- field to catch scrapers -->
+      <div class="form-group">
+        <input type="text" name="_gotcha" style="display:none" />
+      </div>
+
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary" id="contact-submit" name="submit">Send Email</button>
+      </div>
+
+      <div class="form-group">
+        <div class="col-xs-offset-4 col-xs-4 text-center">
+          <input type="hidden" name="_next" value="contact.html" />
+          <!-- error message -->
+        </div>
+      </div>
+    </form>
   </div>
   <br />
 
-  <!-- LightWidget Instagram Widget -->
-  <div class="container va-middle">
-    <h2 class="col-xs-4 text-center">Check out my Instagram feed <a href="https://www.instagram.com/thisiscngan" target="_blank">@thisiscngan</a> for mouth-watering photos of food and aesthetically pleasing sights.</h2>
-    <iframe src="http://lightwidget.com/widgets/de904a99f0ce50e79cdce42ad9efc6bc.html" id="lightwidget_de904a99f0" name="lightwidget_de904a99f0" scrolling="no" allowtransparency="true" class="lightwidget-widget col-xs-8"></iframe>
+  <!-- Heading -->
+  <div class="container">
+    <h1 class="text-center">SOCIAL MEDIA</h1>
+    <hr /><br />
   </div>
-  <br />
 
-  <!-- Twitter Widget -->
+  <!-- LightWidget Instagram Widget & Twitter feed -->
   <div class="container va-middle">
-    <h2 class="col-xs-4 text-center">Or follow me on Twitter <a href="https://twitter.com/cngan" target="_blank">@cngan</a> for insights into what's on my mind.</h2>
-    <span class="col-xs-8">
+    <div class="col-xs-6">
+      <h3 class="text-center">Check out my Instagram feed <a href="https://www.instagram.com/thisiscngan" target="_blank">@thisiscngan</a> for mouth-watering photos of food and aesthetically pleasing sights...</h3>
+    </div>
+    <div class="col-xs-6">
+      <h3 class="text-center">...or follow me on Twitter <a href="https://twitter.com/cngan" target="_blank">@cngan</a> for insights into what's on my mind.</h3>
+    </div>
+  </div>
+
+  <div class="container va-middle">
+    <div class="col-xs-6">
+      <iframe src="http://lightwidget.com/widgets/de904a99f0ce50e79cdce42ad9efc6bc.html" id="lightwidget_de904a99f0" name="lightwidget_de904a99f0" scrolling="no" allowtransparency="true" class="lightwidget-widget"></iframe>
+    </div>
+    <div class="col-xs-6">
       <a class="twitter-timeline" data-height="500" data-theme="light" data-link-color="#dc264d" href="https://twitter.com/cngan"></a>
-    </span>
+    </div>
   </div>
 
   <footer class="container text-center">
