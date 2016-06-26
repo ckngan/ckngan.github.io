@@ -1,33 +1,68 @@
-// Creat input element for testing
+// create input element for testing
 var input = document.createElement('input');
 
-// Create the supports object
+// create the supports object
 var supports = {};
 
 supports.autofocus = 'autofocus' in input;
 supports.required = 'required' in input;
 supports.placeholder = 'placeholder' in input;
 
-// Fallback for autofocus attribute
+// fallback for autofocus attribute
 if (!supports.autofocus) {
   document.getElementById('name').focus();
 }
 
-// Fallback for required attribute
-if (!supports.required) {
+// validates form inputs
+function validateForm() {
+  // fallback for required attribute
+  if (!supports.required) {
+    // TODO need to check if any of the fields are empty
+    // alertUser("empty");
+  }
+
+  // check if email is valid
+  var email = document.forms["form"]["email"].value;
+  var atpos = email.indexOf("@");
+  var dotpos = email.lastIndexOf(".");
+
+  if (atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length) {
+      alertUser("email");
+      return false;
+  }
+
+  // check if website is a valid url
+  // var url = document.forms["form"]["website"].value;
+  // console.log("website value is: " + url)
+
+  // if (url != null || url != "") {
+  //   if (!url.includes(".")) {
+  //     alertUser("website");
+  //     return false;
+  //   }
+  // }
+
+  alertUser("success");
+  return true;
 }
 
-// Checks if given email is valid
-function validEmail(emailInput) {
-  // validate email
-  // return boolean (valid/not valid)
-}
-
-// Checks if website is a valid url
-function validUrl(urlInput) {
-  // validate url
-  // return boolean (valid/not valid)
-}
-
-function validMsg(msgInput) {
+// shows alert for invalid form fields
+// or for a successful submission
+function alertUser(type) {
+  switch (type) {
+    case "success":
+      document.getElementById("error").innerHTML = "<div class='alert alert-success'>Thank you for contacting me! I will be in touch within 48h. If I haven't replied, feel free to shoot me a message at cindyngandc[at]gmail[dot]com.</div>";
+      break;
+    case "empty":
+      document.getElementById("error").innerHTML = '<div class="alert alert-danger">You have one or more empty fields. Please try again.</div>';
+      break;
+    case "email":
+      document.getElementById("error").innerHTML = '<div class="alert alert-danger">You entered an invalid email. Please try again.</div>';
+      break;
+    case "website":
+      document.getElementById("error").innerHTML = '<div class="alert alert-danger">The website you entered is invalid. Please try again.</div>';
+      break;
+    default:
+      document.getElementById("error").innerHTML = "";
+  }
 }

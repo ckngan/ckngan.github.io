@@ -89,14 +89,14 @@ a {
   background-color: transparent;
 }
 a:hover {
-  color: #a91d3b;
+  color: #0c7ea9; /* a91d3b */
 }
 a:active {
   color: #0c7ea9;
 }
 h1 {
   margin: .67em 0;
-  font-size: 2em;
+  /*font-size: 2em;*/
 }
 hr {
   height: 0;
@@ -152,7 +152,6 @@ hr {
 /* HEADER */
 nav {
   font-weight: bold;
-  font-size: 1.2em;
   padding-left: 0;
 }
 nav a {
@@ -161,9 +160,14 @@ nav a {
 nav a:hover {
   text-decoration: overline;
 }
+.active {
+  color: #0c7ea9;
+  text-decoration: overline;
+}
 .navbar {
   position: relative;
   min-height: 50px;
+  padding-top: 1%;
   border-bottom: 1px solid #ccc;
 }
 @media (min-width: 768px) {
@@ -172,7 +176,6 @@ nav a:hover {
   }
 }
 .navbar-fixed-top {
-  padding-top: 15px;
   top: 0;
   background-color:#fff;
   /*border-width: 0 0 1px;*/

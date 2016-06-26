@@ -35,27 +35,19 @@
   </header>
 
   <!-- Heading -->
-  <div class="container">
-    <h1 class="text-center">CONTACT ME</h1>
+  <div class="container text-center">
+    <h1>CONTACT ME</h1>
     <hr />
   </div>
 
   <div class="container text-center">
-    <h3>resume | <a href="https://www.linkedin.com/in/cindyngan" target="_blank">linkedin</a></h3>
+    <h3><a href="docs/CindyNgan_resume.pdf" target="_blank">resume</a> |
+      <a href="https://www.linkedin.com/in/cindyngan" target="_blank">linkedin</a></h3>
   </div>
-
-  <!-- Typeform contact form -->
-  <!-- <div class="container">
-    <br />
-    <div class="typeform-widget" data-url="https://cngan.typeform.com/to/XN3dh8" data-text="Contact Cindy"></div>
-  </div>
-  <div class="container">
-    <div id="typeform">Powered by <a href="https://www.typeform.com/examples/forms/?utm_campaign=XN3dh8&amp;utm_source=typeform.com-1973332-Basic&amp;utm_medium=typeform&amp;utm_content=typeform-embedded-poweredbytypeform&amp;utm_term=EN" target="_blank">Typeform</a></div>
-  </div> -->
 
   <!-- original form -->
   <div class="container">
-    <form class="form-horizontal" role="form" method="post" action="https://formspree.io/cindyngandc@gmail.com">
+    <form class="form-horizontal col-xs-10 col-xs-offset-1" role="form" method="post" action="https://formspree.io/cindyngandc@gmail.com" onsubmit="return validateForm();" name="form">
       <div class="form-group">
         <label for="name" class="control-label" tabindex="-1">Name</label> <span class="required">&nbsp;(required)</span>
         <input type="text" class="form-control" id="name" name="name" placeholder="First &amp; Last Name" autofocus required />
@@ -85,10 +77,11 @@
         <button type="submit" class="btn btn-primary" id="contact-submit" name="submit">Send Email</button>
       </div>
 
+      <!-- error and redirect after submit -->
       <div class="form-group">
-        <div class="col-xs-offset-4 col-xs-4 text-center">
-          <input type="hidden" name="_next" value="contact.html" />
-          <!-- error message -->
+        <input type="hidden" name="_next" value="contact.html" />
+        <div class="col-xs-offset-4 col-xs-4 text-center" id="error">
+          <!-- error message goes here -->
         </div>
       </div>
     </form>
@@ -135,11 +128,12 @@
   </footer>
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <!-- <script type="application/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+  <script type="application/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <!-- <script type="application/javascript" src="js/bootstrap.min.js"></script> -->
   <script type="application/javascript" src="js/typeform.js" async></script>
   <script type="application/javascript" src="http://lightwidget.com/widgets/lightwidget.js" async></script>
   <script type="application/javascript" src="http://platform.twitter.com/widgets.js" async></script>
+  <script type="application/javascript" src="js/form.js" async></script>
 </body>
 </html>
