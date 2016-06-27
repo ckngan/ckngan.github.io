@@ -43,9 +43,9 @@ function validateForm() {
   // }
 
   alertUser("success");
-  setTimeout(function() {
+  // setTimeout(function() {
     return true;
-  }, 5000);
+  // }, 5000);
 }
 
 // shows alert for invalid form fields
@@ -53,7 +53,8 @@ function validateForm() {
 function alertUser(type) {
   switch (type) {
     case "success":
-      document.getElementById("error").innerHTML = "<div class='alert alert-success'>Thank you for contacting me!<br />I will be in touch within 48h.</div>";
+      // document.getElementById("error").innerHTML = "<div class='alert alert-success'>Thank you for contacting me!<br />I will be in touch within 48h.</div>";
+      alert("Thank you for contacting me! I will be in touch within 48h.");
       break;
     case "empty":
       document.getElementById("error").innerHTML = '<div class="alert alert-danger">You have one or more empty fields. Please try again.</div>';

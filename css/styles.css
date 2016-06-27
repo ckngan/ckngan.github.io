@@ -41,11 +41,21 @@ book 300, normal 400, semibold 600, bold 700, extrabold 800
 }
 @font-face {
   font-family: 'Open Sans';
+  src: url('../fonts/opensans/opensans_semibold/OpenSans-SemiBold-webfont.eot');
+  src: url('../fonts/opensans/opensans_semibold/OpenSans-SemiBold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/opensans/opensans_semibold/OpenSans-SemiBold-webfont.woff') format('woff'),
+  url('../fonts/opensans/opensans_semibold/OpenSans-SemiBold-webfont.ttf') format('truetype'),
+  url('../fonts/opensans/opensans_semibold/OpenSans-SemiBold-webfont.svg#open_sanssemibold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Open Sans';
   src: url('../fonts/opensans/opensans_bold/OpenSans-Bold-webfont.eot');
   src: url('../fonts/opensans/opensans_bold/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
   url('../fonts/opensans/opensans_bold/OpenSans-Bold-webfont.woff') format('woff'),
   url('../fonts/opensans/opensans_bold/OpenSans-Bold-webfont.ttf') format('truetype'),
-  url('../fonts/opensans/opensans_bold/OpenSans-Bold-webfont.svg#open_sansextrabold') format('svg');
+  url('../fonts/opensans/opensans_bold/OpenSans-Bold-webfont.svg#open_sansbold') format('svg');
   font-weight: 700;
   font-style: normal;
 }
@@ -89,7 +99,7 @@ a {
   background-color: transparent;
 }
 a:hover {
-  color: #0c7ea9; /* a91d3b */
+  color: #0c7ea9;
 }
 a:active {
   color: #0c7ea9;
@@ -129,24 +139,14 @@ hr {
 .required {
   color: #0c7ea9;
 }
-
-/* WIDGETS */
-.typeform-widget {
-  width: 100%;
-  height: 500px;
-  border: 1px solid #ccc;
+.semibold {
+  font-weight: 600;
 }
-#typeform {
-  font-size: 12px;
-  color: #999;
-  opacity: 0.5;
-  padding-top: 5px;
-  float: right;
+.bold {
+  font-weight: 700;;
 }
-.lightwidget-widget {
-  width: 100%;
-  border: 0;
-  overflow: hidden;
+.highlight {
+  color: #a91d3b;
 }
 
 /* HEADER */
@@ -167,7 +167,7 @@ nav a:hover {
 .navbar {
   position: relative;
   min-height: 50px;
-  padding-top: 1%;
+  padding: 1% 0%;
   border-bottom: 1px solid #ccc;
 }
 @media (min-width: 768px) {
@@ -182,6 +182,25 @@ nav a:hover {
 }
 .offset-right {
   padding-right: 8.33333333%;
+}
+
+/* WIDGETS */
+.typeform-widget {
+  width: 100%;
+  height: 500px;
+  border: 1px solid #ccc;
+}
+#typeform {
+  font-size: 12px;
+  color: #999;
+  opacity: 0.5;
+  padding-top: 5px;
+  float: right;
+}
+.lightwidget-widget {
+  width: 100%;
+  border: 0;
+  overflow: hidden;
 }
 
 /* FOOTER */
